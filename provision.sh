@@ -32,13 +32,6 @@ sudo iptables-save
 update-rc.d elasticsearch defaults 95 10
 /etc/init.d/elasticsearch start
 
-# install head
-cd /usr/share/elasticsearch/bin/ 
-sudo su
-./plugin install mobz/elasticsearch-head
-exit
-cd
-
 # install kibana
 wget https://download.elastic.co/kibana/kibana/kibana-4.3.1-linux-x64.tar.gz
 gunzip kibana-4.3.1-linux-x64.tar.gz
@@ -65,6 +58,13 @@ sudo ./bin/kibana
 echo 'deb http://packages.elasticsearch.org/logstash/2.0/debian stable main' | sudo tee /etc/apt/sources.list.d/logstash.list
 sudo apt-get update
 sudo apt-get install logstash
+
+# install head
+cd /usr/share/elasticsearch/bin/ 
+sudo su
+./plugin install mobz/elasticsearch-head
+exit
+cd
 
 # intall odbc
 sudo apt-get -y install unixodbc unixodbc-dev freetds-dev freetds-bin tdsodbc
