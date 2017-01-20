@@ -13,7 +13,7 @@ A simple Ubuntu box with ELK stack installed
 clone the repo
 
 ```
-git clone https://github.com/buonzz/vagrant-elk-box.git
+git clone https://github.com/helverton/start_elasticsearch.git
 ```
 provision the box
 ```
